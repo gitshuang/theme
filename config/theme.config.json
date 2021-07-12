@@ -1,0 +1,37 @@
+{
+  "theme": [
+    {
+      "theme": "dark",
+      "fileName": "dark.css"
+    },
+    {
+      "key": "mingQing",
+      "fileName": "mingQing.css",
+      "modifyVars": {
+        "@primary-color": "#13C2C2",
+        "@aaaaa-bbbb": "#13C2C2"
+      }
+    },
+    {
+      "key": "dust",
+      "fileName": "dust.css",
+      "modifyVars": {
+        "@primary-color": "#F5222D",
+        "@aaaaa-bbbb": "#F5222D"
+      }
+    },
+    {
+      "key": "selfDefine",
+      "fileName": "selfDefine.css",
+      "modifyVars": {
+        "@primary-color": "#bac3c0",
+        "@aaaaa-bbbb": "#bac3c0"
+      }
+    }
+  ],
+  "min": true,
+  "isModule": true,
+  "ignoreAntd": false,
+  "ignoreProLayout": false,
+  "cache": true
+}
