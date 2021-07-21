@@ -1,7 +1,7 @@
 const path = require('path');
 const { generateTheme } = require('antd-theme-generator');
 const options = {
-  stylesDir: path.join(__dirname, './src'),
+  stylesDir: path.join(__dirname, './src/styles'),
   antDir: path.join(__dirname, './node_modules/antd'),
   varFile: path.join(__dirname, './src/styles/variables.less'),
   mainLessFile: path.join(__dirname, './src/styles/index.less'),

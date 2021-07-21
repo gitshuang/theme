@@ -548,6 +548,7 @@ module.exports = function (webpackEnv) {
                 'less-loader',
                   {
                     lessOptions: {
+                      //modifyVars: { '@primary-color': 'red' },
                       javascriptEnabled: true,
                     }
                   }

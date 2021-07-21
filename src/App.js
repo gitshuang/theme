@@ -1,7 +1,7 @@
 import { Button, Steps } from "antd";
 import ReactECharts from 'echarts-for-react';
-import './styles/variables.less';
 import defaultTheme from './default-theme'
+import './App.less';
 //import './App.css'
 const colors = ['red','blue','yellow','green']
 const { Step } = Steps;
@@ -53,7 +53,7 @@ function App() {
           <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
           <Step title="Waiting" description="This is a description." />
         </Steps>
-        <div className="field">这是自定义组件，下面是图表组件</div>
+        <div className="selfDefineCom">这是自定义组件</div>
         <ReactECharts option={options} />
     </div>
   );

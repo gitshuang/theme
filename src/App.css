@@ -1,6 +1,9 @@
+@import './styles/variables.less'; 
 .app {
-  background-color: var(--PC);
-  height: 100vh;
+  background-color:var(--PC);
+}
+.selfDefineCom{
+  font-weight: 600;
 }
 
 
