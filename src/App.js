@@ -1,8 +1,22 @@
+import React, { useState } from 'react';
 import { Button, Steps } from "antd";
+import * as echarts from 'echarts';
 import ReactECharts from 'echarts-for-react';
 import defaultTheme from './default-theme'
 import './App.less';
-//import './App.css'
+echarts.registerTheme('red', {
+  backgroundColor: 'red',
+  //color: 'white',
+});
+echarts.registerTheme('blue', {
+  backgroundColor: 'blue'
+});
+echarts.registerTheme('yellow', {
+  backgroundColor: 'yellow'
+});
+echarts.registerTheme('green', {
+  backgroundColor: 'green'
+});
 const colors = ['red','blue','yellow','green']
 const { Step } = Steps;
 var n = 0
@@ -21,7 +35,7 @@ const options = {
       type: 'line',
       smooth: true,
       itemStyle:{
-        color: defaultTheme.primaryColor
+        color: document.body.style.getPropertyValue('--PC')||defaultTheme.primaryColor
       }
     },
   ],
@@ -30,9 +44,12 @@ const options = {
   },
 };
 function App() {
+  const [theme, setTheme] = useState();
   const change = () => {
     var color = colors[n%4]
     n++
+    setTheme(color)
+    window.globalColor = color
     window.less
       .modifyVars({
         '@primary-color': color,
@@ -44,6 +61,7 @@ function App() {
       .catch(error => {
         console.log(error);
       });
+      document.body.setAttribute("style",`--PC:${color};--aa:#567`);
   }
   return (
     <div className="app">
@@ -54,7 +72,7 @@ function App() {
           <Step title="Waiting" description="This is a description." />
         </Steps>
         <div className="selfDefineCom">这是自定义组件</div>
-        <ReactECharts option={options} />
+        <ReactECharts option={options} theme={theme}/>
     </div>
   );
 }

@@ -1,13 +1,20 @@
 @import './styles/index.less'; 
+// 自定义组件样式可以使用c3 var , 但是这里使用less变量不会换肤，less变量应该定义在variables.less里面才能被 modyfyvar
 .app {
   background-color: #b3adad;
-  .height()
+  //.height();
+  height: 100vh;
 }
 .selfDefineCom{
   font-weight: 600;
-  .colorAndFont()
+  color: var(--PC); 
+  // .color();//使用less变量不会换肤
+  //.font();
+  font-size: 30px;
 }
-
+.selfDefineCom{
+  border:5px solid var(--PC)
+}
 
 
 
